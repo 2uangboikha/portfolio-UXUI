@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.4.3 | MIT License | https://tailwindcss.com
+! tailwindcss v3.4.4 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -574,6 +574,10 @@ video {
   position: sticky;
 }
 
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
 }
@@ -584,6 +588,10 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.z-0 {
+  z-index: 0;
 }
 
 .z-50 {
@@ -598,8 +606,16 @@ video {
   display: flex;
 }
 
-.h-full {
-  height: 100%;
+.grid {
+  display: grid;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-3 {
+  height: 0.75rem;
 }
 
 .w-1\/2 {
@@ -678,10 +694,6 @@ video {
   gap: 8%;
 }
 
-.self-end {
-  align-self: flex-end;
-}
-
 .rounded-lg {
   border-radius: 0.5rem;
 }
@@ -737,8 +749,9 @@ video {
   background-color: rgb(245 245 245 / var(--tw-bg-opacity));
 }
 
-.bg-\[conic-gradient\(from_215deg_at_50\%_50\%\2c \#181818_0\%\2c \#7E7E7E_27\%\2c \#595959_50\%\2c \#2F2F2F_83\%\2c \#1B1B1B_98\%\2c \#181818_100\%\)\] {
-  background-image: conic-gradient(from 215deg at 50% 50%,#181818 0%,#7E7E7E 27%,#595959 50%,#2F2F2F 83%,#1B1B1B 98%,#181818 100%);
+.bg-red-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(239 68 68 / var(--tw-bg-opacity));
 }
 
 .bg-cinemate-gradient {
@@ -793,22 +806,9 @@ video {
   padding-bottom: 1.5rem;
 }
 
-.py-\[11\%\] {
-  padding-top: 11%;
-  padding-bottom: 11%;
-}
-
 .py-\[8\%\] {
   padding-top: 8%;
   padding-bottom: 8%;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
-.pb-\[10\] {
-  padding-bottom: 10;
 }
 
 .pb-\[2\%\] {
@@ -838,11 +838,6 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
-}
-
-.text-6xl {
-  font-size: 3.75rem;
-  line-height: 1;
 }
 
 .text-base {
@@ -900,6 +895,18 @@ video {
 
 .mix-blend-difference {
   mix-blend-mode: difference;
+}
+
+.transition {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.duration-300 {
+  transition-duration: 300ms;
 }
 
 /* button */
@@ -1039,12 +1046,12 @@ video {
 }
 
 .detail div:first-child h1 {
+  font-size: 60px;
+  line-height: 80px;
   -webkit-background-clip: text;
           background-clip: text;
-  font-size: 3.75rem;
-  line-height: 1.15;
   font-weight: 800;
-  color: transparent;
+  color: transparent
 }
 
 .detail div:first-child p, .detail div:first-child li {
@@ -1097,57 +1104,67 @@ video {
 
 /* fixed progressive bar */
 
-.progress {
-  position: fixed;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  border-top-width: 1px;
-  --tw-border-opacity: 1;
-  border-color: rgb(10 10 10 / var(--tw-border-opacity));
-  --tw-bg-opacity: 1;
-  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+/* .progress {
+    @apply flex flex-col gap-0 border-t-[1px] border-neutral-950 fixed left-0 right-0 bottom-0  bg-neutral-100
 }
 
 .progress div:last-child {
+    @apply flex items-center justify-between px-margin h-[70px] text-base font-medium text-neutral-950 underline
+}
+
+.progress-line {
+    height: 6px;
+    width: 100%;
+    background-color: #0A0A0A;
+    scale: 0 1;
+    transform-origin: left;
+    animation: progress-line linear;
+    animation-timeline: scroll();
+}
+
+
+@keyframes progress-line {
+    to { scale: 1 1; }
+} */
+
+.progress {
   display: flex;
-  height: 70px;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 10%;
-  padding-right: 10%;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 500;
-  --tw-text-opacity: 1;
-  color: rgb(10 10 10 / var(--tw-text-opacity));
-  text-decoration-line: underline;
+  flex-direction: column;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ddd;
+  padding: 8px 16px;
+  z-index: 1000;
+  /* Ensure it's on top of other content */
 }
 
 .progress-line {
   height: 6px;
-  width: 100%;
-  background-color: #0A0A0A;
-  scale: 0 1;
-  transform-origin: left;
-  animation: progress-line linear;
-  animation-timeline: scroll();
+  width: 0;
+  /* Initial width */
+  background-color: #0a0a0a;
+  transition: width 0.3s ease;
+  /* Smooth transition */
 }
 
-@keyframes progress-line {
-  to {
-    scale: 1 1;
-  }
+.progress-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 0;
 }
 
-.sticky-top {
-  /* For Safari */
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: transparent;
-  /* Ensure it doesn't cover other content */
+.progress-details p {
+  margin: 0;
+  cursor: pointer;
 }
+
+.progress-details .section.current {
+  font-weight: bold;
+  color: blue;
+  /* Customize the current section text color */
+}
+  
