@@ -1142,12 +1142,3 @@ video {
     scale: 1 1;
   }
 }
-
-.sticky-top {
-  /* For Safari */
-  position: sticky;
-  top: 0;
-  z-index: 10;
-  background: transparent;
-  /* Ensure it doesn't cover other content */
-}
