@@ -1,0 +1,218 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em's Kit - Multi-brand UI Library
+    </title>
+    <link rel="icon" href="img/logo-w.svg">
+    <link rel="stylesheet" href="output.css">
+</head>
+
+<body class="bg-neutral-100 relative">
+    
+    <!-- navigation bar -->
+    <div class="navbar absolute top-0 left-0 right-0">
+
+        <!-- left side -->
+        <a href="index.html">
+            <img src="img/logo-w.svg" alt="">
+        </a>
+        
+        <!-- right side -->
+        <ul class="flex items-center gap-4">
+            <li>
+                <a href="index.html">Home</a>
+            </li>
+            <li>
+                <a href="index.html#project">Project</a>
+            </li>
+            <li id="alo" class="cursor-pointer">Contact</li>
+            <li>
+                <a href="Kha Quang Boi_CV.pdf" target="_blank">Resume</a>
+            </li>
+            <button class="btn" onclick="sendEmail()">Send email</button>
+        </ul>
+    </div>
+
+    <!-- hero img -->
+    <img id="top-ne" src="img/em's/thumbnail.png" alt="">
+
+    <!-- content of case study -->
+    <!-- 1 overview -->
+    <div id="ov-ne" class="detail">
+
+        <!-- key info -->
+        <div>
+            <h1 class="bg-em-gradient">Multi-brand UI kit</h1>
+            <p>A comprehensive Token-Based UI Kit built for enterprise scale. Design once, apply everywhere with Collections.</p>
+        </div>
+
+        <!-- secondary -->
+        <div style="flex-direction: row; align-self: start; gap: 24px">
+
+            <!-- left -->
+            <ul class="flex flex-col text-base font-normal text-neutral-600 gap-4">
+                <li>Project Type:</li>
+                <li>Duration:</li>
+                <li>Role:</li>
+                <li>Tools:</li>
+            </ul>
+
+            <!-- right -->
+            <ul class="flex flex-col text-base font-normal text-neutral-600 gap-4">
+                <li>UI library, Individual project</li>
+                <li>2 month</li>
+                <li>UX/UI Designer</li>
+                <li>
+                    <img src="icon/figma-color.svg" alt="Figma">
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- quick links -->
+    <div class="sum bg-em-strong">
+        <h3>QUICK LINKS</h3>
+        <div class="flex gap-6">
+            <a href="https://www.behance.net/gallery/244699235/Ems-Kit-Multi-Brand-UI-library" target="_blank">
+                <button class="btn">Showcase Behance</button>
+            </a>
+            <a href="https://www.figma.com/proto/tXswh07cM95OZSwaRXVzJp/Em-s-Kit?page-id=1188%3A11097&node-id=10640-7998&viewport=722%2C576%2C0.31&t=wZBd5TbfJnDv7tUd-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=10640%3A7998" target="_blank">
+                <button class="btn">Prototype (demo)</button>
+            </a>
+            <button id="uf" class="btn">Figma file</button>
+        </div>
+    </div>
+
+    <!-- visual breakdown  -->
+    <div>
+        <!-- showcase -->
+        <img src="img/em's/2.png" alt="">
+        <img id="da-ne" src="img/em's/3.png" alt="">
+        <img id="vc-ne" src="img/em's/4.png" alt="">
+        <img id="sg-ne" src="img/em's/5.png" alt="">
+        <img src="img/em's/6.png" alt="">
+
+        <!-- hifi prototype -->
+        <iframe id="dm-ne" style="border: 1px solid rgba(0, 0, 0, 0.1);" width="100%" height="1000" src="https://embed.figma.com/proto/tXswh07cM95OZSwaRXVzJp/Em-s-Kit?page-id=1188%3A11097&node-id=10640-7998&viewport=491%2C91%2C0.05&scaling=scale-down-width&content-scaling=fixed&starting-point-node-id=10640%3A7998&embed-host=share" allowfullscreen></iframe>
+        <img src="img/em's/8.png" alt="">
+        <img src="img/em's/9.png" alt="">
+        <img src="img/em's/10.png" alt="">
+    </div>
+
+    <!-- fix progress bar -->
+    <div class="progress">
+        <div class="progress-line"></div>
+        <div>
+            <p id="ov" class="cursor-pointer">Overview</p>
+            <p id="da" class="cursor-pointer">Design approach</p>
+            <p id="vc" class="cursor-pointer">Variable collections</p>
+            <p id="sg" class="cursor-pointer">Style guide</p>
+            <p id="dm" class="cursor-pointer">Demo</p>
+            <img id="top" class="cursor-pointer" src="icon/ArrowLineUp.svg" alt="">
+        </div> 
+    </div>
+
+    <!-- contact -->
+    <div id="alo-ne" class="footer">
+
+        <!-- cta -->
+        <h2>Let’s work together</h2>
+
+        <!-- social -->
+        <div class="flex flex-col gap-2">
+
+            <!-- phone -->
+            <div class="flex items-center gap-2">
+                <img src="icon/Phone.svg" alt="">
+                <p class="text-neutral-50 text-base font-light">(+84) 899 467 545</p>
+            </div>
+
+            <!-- mail -->
+            <div class="flex items-center gap-2">
+                <img src="icon/Mail.svg" alt="">
+                <p class="text-neutral-50 text-base font-light">quangboikha.ms@gmail.com</p>
+            </div>
+
+            <!-- linkedin -->
+            <a href="https://www.linkedin.com/in/kha-qu%E1%BA%A3ng-b%E1%BB%99i-084ab0165/" target="_blank">
+                <div class="flex items-center gap-2">
+                    <img src="icon/Linkedin.svg" alt="">
+                    <p class="text-neutral-50 text-base font-light">Kha Quảng Bội</p>
+                </div>
+            </a>
+
+            <!-- behance -->
+            <a href="https://www.behance.net/b209a479" target="_blank">
+                <div class="flex items-center gap-2">
+                    <img src="icon/Behance.svg" alt="">
+                    <p class="text-neutral-50 text-base font-light">Kha Quảng Bội</p>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <div class="py-6 invisible">
+        neu ko co phan nay thi contact section se bi hut mat phan phia duoi do bi chiem boi fix progress bar
+    </div>
+
+
+
+
+
+    <script>
+        // scroll to overview
+        document.getElementById('ov').addEventListener('click', function() {
+          document.getElementById('ov-ne').scrollIntoView({ 
+            behavior: 'smooth'
+          });
+        });
+
+        // scroll to design approach (methodology) sum
+        document.getElementById('da').addEventListener('click', function() {
+          document.getElementById('da-ne').scrollIntoView({ 
+            behavior: 'smooth'
+          });
+        });
+
+        // scroll to variable collections sum
+        document.getElementById('vc').addEventListener('click', function() {
+          document.getElementById('vc-ne').scrollIntoView({ 
+            behavior: 'smooth'
+          });
+        });
+
+        // scroll to style guide sum
+        document.getElementById('sg').addEventListener('click', function() {
+          document.getElementById('sg-ne').scrollIntoView({ 
+            behavior: 'smooth'
+          });
+        });
+
+        // scroll to demo sum
+        document.getElementById('dm').addEventListener('click', function() {
+          document.getElementById('dm-ne').scrollIntoView({ 
+            behavior: 'smooth'
+          });
+        });
+
+
+        // scroll to top
+        document.getElementById('top').addEventListener('click', function() {
+          document.getElementById('top-ne').scrollIntoView({ 
+            behavior: 'smooth'
+          });
+        });
+
+
+        // send email to Kha
+        function sendEmail() {
+        const email = encodeURIComponent('quangboikha.ms@gmail.com');
+        const subject = encodeURIComponent('Subject');
+        const body = encodeURIComponent('Dear Ms. Kha,');
+        const mailtoLink = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+        window.open(mailtoLink, '_blank');
+        }
+    </script>
+</body>
+</html>
